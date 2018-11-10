@@ -1,23 +1,27 @@
 
 import React from 'react';
 import { 
-  Card, 
-  CardText, 
-  CardBody,
-  CardTitle, 
+  Row,
+  Col,
 } from 'reactstrap';
+import Octicon from '@githubprimer/octicons-react';
+import {
+  TriangleUp,
+} from '@githubprimer/octicons-react';
 
 const Venue = function Venue(props) {
-  const {name, description} = props;
+  const {name, description, url} = props;
   return (
-    <div>
-      <Card>
-        <CardBody>
-          <CardTitle>{name}</CardTitle>
-          <CardText>{description}</CardText>
-        </CardBody>
-      </Card>
-    </div>
+    <Row>
+      <Col sm="1">
+        <Octicon icon={TriangleUp}/><br />
+        <p>10</p>
+      </Col>
+      <Col sm="10">
+        <h4><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h4>
+        <p>{description}</p>
+      </Col>
+    </Row>
   );
 };
 
