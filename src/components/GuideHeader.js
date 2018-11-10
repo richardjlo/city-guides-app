@@ -5,12 +5,14 @@ import {
 } from 'reactstrap';
 
 const CityGuideApp = function CityGuideApp(props) {
+  const {title, author} = props;
   return(
     <Row>
       <Col>
-        <h1 className="text-center mb-4">
-          {props.title}
-        </h1>
+        <div className="text-center mb-4">
+          <h1>{title}</h1>
+          <p>By {author}</p>
+        </div>
       </Col>
     </Row>
   );
