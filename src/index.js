@@ -33,6 +33,19 @@ const GUIDE = {
  
 
 const CityGuideApp = function CityGuideApp () {
+  const venues = GUIDE.venues.map((obj) => {
+    return(
+      <Venue 
+        key={obj.id}
+        id={obj.id}
+        name={obj.name}
+        description={obj.description}
+        url={obj.url}
+        count={obj.count}
+      />
+    );
+  });
+
   return(
     <React.Fragment>
       <NavBar />
@@ -41,11 +54,7 @@ const CityGuideApp = function CityGuideApp () {
           title={GUIDE.title} 
           author={GUIDE.author}
         />
-        <Venue 
-          name={GUIDE['venues'][0].name}
-          description={GUIDE['venues'][0].description}
-          url={GUIDE['venues'][0].url}
-        />
+        {venues}
       </Container>
     </React.Fragment>
   );
