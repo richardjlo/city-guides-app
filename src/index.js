@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import GuideHeader from './components/GuideHeader';
-import NavBar from './components/layouts/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import GuideHeader from './components/GuideHeader';
+import Venue from './components/Venue';
+import NavBar from './components/layouts/NavBar';
+
 import {
   Container,
 } from 'reactstrap';
 
-const DATA = {
+const GUIDE = {
   id: 1,
   title: 'Chiang Mai for First Time Visitors',
   author: 'Richard Lo',
@@ -28,13 +30,21 @@ const DATA = {
     },
   ]
 }
+ 
 
 const CityGuideApp = function CityGuideApp () {
   return(
     <React.Fragment>
       <NavBar />
       <Container className="mt-5">
-        <GuideHeader title={DATA['title']} />
+        <GuideHeader 
+          title={GUIDE.title} 
+          author={GUIDE.author}
+        />
+        <Venue 
+          name={GUIDE['venues'][0].name}
+          description={GUIDE['venues'][0].description}
+        />
       </Container>
     </React.Fragment>
   );
