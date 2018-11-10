@@ -10,12 +10,12 @@ import {
 } from '@githubprimer/octicons-react';
 
 const Venue = function Venue(props) {
-  const {name, description, url} = props;
+  const {name, description, url, count} = props;
   return (
-    <Row>
+    <Row className="pt-3 mb-4 border border-dark">
       <Col sm="1">
         <Octicon icon={TriangleUp}/><br />
-        <p>10</p>
+        <p>{count}</p>
       </Col>
       <Col sm="10">
         <h4><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h4>
