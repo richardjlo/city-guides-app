@@ -18,14 +18,14 @@ const GUIDE = {
       id: 1,
       name: "Khun Kae's Juice Bar",
       description: 'The BEST smoothie place in Chiang Mai. Tons of options, super fresh, and crazy cheap.',
-      mapUrl: 'https://goo.gl/maps/MdBKESmZ1Em',
+      url: 'https://goo.gl/maps/MdBKESmZ1Em',
       count: '10',
     },
     {
       id: 2,
       name: "The North Gate Jazz Co-Op",
       description: 'Cool venue to hang out and listen to live jazz. I think that they have live jazz every night.',
-      mapUrl: 'https://goo.gl/maps/ddf3wXwt6Q42',
+      url: 'https://goo.gl/maps/ddf3wXwt6Q42',
       count: '3',
     },
   ]
@@ -44,6 +44,7 @@ const CityGuideApp = function CityGuideApp () {
         <Venue 
           name={GUIDE['venues'][0].name}
           description={GUIDE['venues'][0].description}
+          url={GUIDE['venues'][0].url}
         />
       </Container>
     </React.Fragment>
