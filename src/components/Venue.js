@@ -17,7 +17,7 @@ const Venue = function Venue(props) {
         <Octicon icon={TriangleUp}/><br />
         <p>{count}</p>
       </Col>
-      <Col sm="10">
+      <Col sm="11">
         <h4><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h4>
         <p>{description}</p>
       </Col>
